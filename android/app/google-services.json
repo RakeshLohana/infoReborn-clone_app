@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1000849744741",
+    "project_id": "info-reborn-new",
+    "storage_bucket": "info-reborn-new.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000849744741:android:a11b090d2d04368df2f78c",
+        "android_client_info": {
+          "package_name": "com.example.bet_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHN1G3HoC2DFos_ISja8lll9WLR3fzdu0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
