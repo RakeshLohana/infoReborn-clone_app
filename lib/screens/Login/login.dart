@@ -167,15 +167,15 @@ class _LoginScreenState extends State<LoginScreen> {
                             onTap: () {
                               if (_username.text.isEmpty ||
                                   _password.text.isEmpty) {
-                                Toast.showToast(
-                                    message:
-                                        "Username and password cannot be empty");
+                                // Toast.showToast(
+                                //     message:
+                                //         "Username and password cannot be empty");
                                 return; // Return to prevent further execution
                               }
 
                               if (!AuthHelper().isUsernameValid(_username.text)) {
-                                Toast.showToast(
-                                    message: "Invalid username format");
+                                // Toast.showToast(
+                                //     message: "Invalid username format");
                                 return; // Return to prevent further execution
                               }
 
@@ -186,7 +186,7 @@ class _LoginScreenState extends State<LoginScreen> {
                              
                               } catch (e) {
                                 print(e.toString());
-                                Toast.showToast(message: "An error occurred");
+                                // Toast.showToast(message: "An error occurred");
                               }
                             },
                             child: Container(

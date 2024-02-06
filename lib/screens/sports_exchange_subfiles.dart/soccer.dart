@@ -12,12 +12,9 @@ class Soccer extends StatefulWidget {
 
 class _SoccerState extends State<Soccer> {
   
-    // List listTitle=["My Markets","Inplay Events","Inplay Soon ","Cricket","Soccer","Tennis","Horse Race Today Card","Greyhound-Todays Card"];
 
   @override
   Widget build(BuildContext context) {
-       double height=MediaQuery.of(context).size.height;
-    double width =MediaQuery.of(context).size.width;
     return Scaffold(
   
       

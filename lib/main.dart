@@ -19,21 +19,36 @@ import 'package:bet_app/screens/sports_exchange_subfiles.dart/tennis.dart';
 import 'package:bet_app/widgets/Administration/Balance%20Sheet/new.dart';
 import 'package:bet_app/widgets/menu.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
- WidgetsFlutterBinding.ensureInitialized();
+ WidgetsFlutterBinding.ensureInitialized(
+  
+);
+ if(kIsWeb){
+ await Firebase.initializeApp(
+  options:const FirebaseOptions
+  (apiKey: 'AIzaSyDFHrvxd2roaB8kQ0c1zLezcZ0htdW8rA8',
+   appId: '1:1000849744741:web:0ab51d590f91f6fff2f78c',
+    messagingSenderId:'1000849744741',
+     projectId: 'info-reborn-new',
+     storageBucket: "info-reborn-new.appspot.com",
+     )
+
+  );
+ }
    SharedPreferences prefs = await SharedPreferences.getInstance();
 
-  // Check if the unique ID is already stored in shared preferences.
   await Firebase.initializeApp();
       String? uniqueID = prefs.getString('uniqueID');
 
   runApp( 
     MaterialApp(
       navigatorKey: NavigationService.navigatorKey,
-          initialRoute:uniqueID == null? '/register': "/login",
+      initialRoute: "/home",
+          // initialRoute:uniqueID == null? '/register': "/login",
           routes: {
           '/AmountFetchWidget':(BuildContext context) => AmountFetchWidget(),
               '/register':(BuildContext context) => Register(prefs:prefs ,),

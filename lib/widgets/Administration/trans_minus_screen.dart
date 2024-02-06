@@ -411,7 +411,7 @@ Future<void> fetchUserAmount(String? userId) async {
           'amount': newAmount,
           'description': description,
         }).then((value) {
-             Toast.showToast(message: "Hawala Added Successfully");
+            //  Toast.showToast(message: "Hawala Added Successfully");
 
         });
         // Clear the input fields
@@ -458,7 +458,7 @@ Future<void> fetchUserAmount(String? userId) async {
           'creditAmount': newAmount,
           'description': description,
         }).then((value) {
-          Toast.showToast(message: "Hawala Added Successfully");
+          // Toast.showToast(message: "Hawala Added Successfully");
         }
         
         

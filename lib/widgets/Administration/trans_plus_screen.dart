@@ -404,7 +404,7 @@ DocumentSnapshot userData = await userRef.get();
 
 if (!userData.exists) {
   await userRef.set(postData).then((value) {
-        Toast.showToast(message: "Hawala Added Successfully");
+        // Toast.showToast(message: "Hawala Added Successfully");
 
   });
 } else {
@@ -417,7 +417,7 @@ if (!userData.exists) {
     'amount': newAmount,
      'description': description,
   }).then((value) {
-        Toast.showToast(message: "Hawala Added Successfully");
+        // Toast.showToast(message: "Hawala Added Successfully");
 
 
   });
@@ -463,7 +463,7 @@ DocumentSnapshot userData = await userRef.get();
 
 if (!userData.exists) {
   await userRef.set(postData).then((value) {
-        Toast.showToast(message: "Hawala Added Successfully");
+        // Toast.showToast(message: "Hawala Added Successfully");
 
   });
 } else {
@@ -476,7 +476,7 @@ if (!userData.exists) {
     'creditAmount': newAmount,
      'description': description,
   }).then((value) {
-    Toast.showToast(message: "Hawala Added Successfully");
+    // Toast.showToast(message: "Hawala Added Successfully");
   });
 
 

@@ -1,9 +1,11 @@
 import 'package:bet_app/Services/navigation_service.dart';
 import 'package:bet_app/Utils/color_constants.dart';
+import 'package:bet_app/controller/controller.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -51,6 +53,16 @@ class _HomeScreenState extends State<HomeScreen> {
 
    
     }
+    late EventsController eventsController=Get.put(EventsController());
+
+
+    @override
+  void initState() {
+    eventsController.fetchData();
+
+    super.initState();
+
+  }
   
  
 
@@ -103,11 +115,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     return ListView.builder(
                       itemCount: length,
                       itemBuilder: (context, index) {
-                        // Check if the user is an admin to display the "Administration" item
                      
     
-                        // Conditionally display the item based on the user's role
-                     
+              
                           return GestureDetector(
                             onTap: () {
                               _navigate.navigateToRoute(listNavigate[index]);

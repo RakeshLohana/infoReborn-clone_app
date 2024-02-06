@@ -36,9 +36,7 @@ class _RegisterState extends State<Register> {
     );
   }
 
-final TextEditingController _register=TextEditingController();
 
-  late NavigationService _navigate;
 
     final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
@@ -46,7 +44,6 @@ final TextEditingController _register=TextEditingController();
   Widget build(BuildContext context) {
 
     
-        _navigate = NavigationService();
     
     double height=MediaQuery.of(context).size.height;
     double width =MediaQuery.of(context).size.width;

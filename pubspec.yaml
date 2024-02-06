@@ -37,13 +37,13 @@ dependencies:
   cupertino_icons: ^1.0.2
   http:
   dio:
-  fluttertoast: ^8.2.2
   marquee: ^2.2.3
   provider:
   get_it:
   intl: ^0.18.1
   lottie: ^2.7.0
   cloud_firestore:
+  get:
   device_info:
   package_info:
   firebase_auth:

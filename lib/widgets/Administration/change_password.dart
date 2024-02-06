@@ -144,7 +144,7 @@ String? _validateConfirmPassword(String? value) {
                         if (_formKey.currentState!.validate()) {
     
                           AuthHelper().updatePassword(_oldPassword.text, _confirmPassword.text).onError((error, stackTrace) {
-                            Toast.showToast(message: "error occured");
+                            // Toast.showToast(message: "error occured");
                           });
                         }
                         

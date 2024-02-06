@@ -165,11 +165,11 @@ class _NewAccountState extends State<NewAccount> {
                        child: GestureDetector(
                                          onTap: (){
                                           if(_username.text.isEmpty||_password.text.isEmpty){
-                                            Toast.showToast(message: "username and password cannot be empty");
+                                            // Toast.showToast(message: "username and password cannot be empty");
 
                                           }
                                            if (!AuthHelper().isUsernameValid(_username.text)) {
-                                        Toast.showToast(message: "Invalid username format");
+                                        // Toast.showToast(message: "Invalid username format");
                                return;
                                      }
                                           try{

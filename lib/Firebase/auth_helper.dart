@@ -33,10 +33,10 @@ Future<void> registerUserWithUsername(String username, String password,String ro
       'role': role,
       'username': username, // Store the username separately if needed
     }).then((value) {
-       Toast.showToast(message: "New User Added");
+      //  Toast.showToast(message: "New User Added");
 
     }).onError((error, stackTrace) {
-                                         Toast.showToast(message: "Error occured while adding user");
+                                        //  Toast.showToast(message: "Error occured while adding user");
 
 
 
@@ -52,16 +52,15 @@ final FirebaseAuth _auth = FirebaseAuth.instance;
     try {
       await _auth.signInWithEmailAndPassword(email: email+"@gmail.com", password: password).then((value) {
         _navigate.navigateToRoute("/home");
-        Toast.showToast(message: "Login Successful");
+        // Toast.showToast(message: "Login Successful");
 
       }).onError((error, stackTrace){
-         Toast.showToast(message: "error occured");
+        //  Toast.showToast(message: "error occured");
 
       });
       
-      // Navigate to the next screen upon successful sign-in.
     } catch (e) {
-      // Handle sign-in errors.
+      print(e.toString());
     }
   }
 
@@ -80,7 +79,7 @@ Future<void> updatePassword(String oldPassword, String newPassword) async {
       );
 
       await user.reauthenticateWithCredential(credential).onError((error, stackTrace) {
-        Toast.showToast(message: "error occured");
+        // Toast.showToast(message: "error occured");
        throw Exception(error.toString());
 
        
@@ -88,7 +87,7 @@ Future<void> updatePassword(String oldPassword, String newPassword) async {
 
       // Update the password
       await user.updatePassword(newPassword).then((value) {
-        Toast.showToast(message: "Password changed successfully");
+        // Toast.showToast(message: "Password changed successfully");
       });
       print("Password updated successfully");
     } else {

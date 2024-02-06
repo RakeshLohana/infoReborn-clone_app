@@ -12,7 +12,7 @@ class TennisMatchOdds extends StatefulWidget {
  final int index;
   
 
-  const TennisMatchOdds({super.key,required this.time, required this.index});
+  const TennisMatchOdds({super.key,required this.time, required this.index, required String keyNew});
 
   @override
   State<TennisMatchOdds> createState() => _TennisMatchOddsState();
